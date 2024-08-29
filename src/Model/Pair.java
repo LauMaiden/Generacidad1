@@ -1,5 +1,5 @@
 
-package Genericos;
+package Model;
 
 public class Pair <T,U> {
     private T first;

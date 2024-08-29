@@ -1,6 +1,6 @@
-package Model;
+package Controller;
 
-import Genericos.Pair;
+import Model.Pair;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;

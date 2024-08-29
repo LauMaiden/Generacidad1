@@ -1,8 +1,8 @@
 
-package principal;
+package View;
 
-import Genericos.Pair;
-import Model.UsuarioBD;
+import Model.Pair;
+import Controller.UsuarioBD;
 import java.awt.Frame;
 import java.awt.Image;
 import java.awt.Toolkit;
@@ -81,10 +81,13 @@ public class Registro extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         //llama a insertar
+        System.out.println("Antes de iniciar");        
         Pair<String, Integer> Dato1 = new Pair<String, Integer>(txtnombre.getText(),Integer.parseInt(txtedad.getText()));
         LocalDate fecha = LocalDate.parse(txtfecha.getText());        
         Pair<String, LocalDate> Dato2 = new Pair<String, LocalDate>(txteps.getText(),fecha);       
+        
         UsuarioBD xx = new UsuarioBD();
+        
         xx.InsertaUsuario(txtid.getText(), Dato1, Dato2);
         JOptionPane.showMessageDialog(null, "Usuario insertado con exito","Informacion", JOptionPane.INFORMATION_MESSAGE);
         System.out.println("usuario insertado");
